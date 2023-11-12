@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata: 
+  name: posts-srv
+spec: 
+  type: NodePort
+  selector:
+    app: posts
+  ports: 
+    - name: ports
+      protocol: TCP
+      port: 4000
+      targetPort: 4000
+
+
+      # NODE PORT TO ACCESS ON OUTSIDE THE POD (DEV PURPOSES)
+      # kubectl apply -f posts-srv.yaml
+      # minikube ip
+      # kubectl describe service posts-srv
+      # <minikube ip>/NodePort

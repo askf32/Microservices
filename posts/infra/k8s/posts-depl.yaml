@@ -15,9 +15,3 @@ spec:
       containers:
         - name: posts
           image: docker/posts
-
-          # TYPES OF SERVICES
-          # Cluster ip => sets up easy-to-remember URL to access a pod only exposes pod in the cluster
-          # Node port => makes a pod accessible from outside the cluster. Usually only used for dev purposes
-          # Load balancer => Makes a pod accessible from outside the cluster this is the right way to espose the pod to the outside world
-          # External Name => Redricts an in-cluster request to a CNAME url....don't worry about this one 
